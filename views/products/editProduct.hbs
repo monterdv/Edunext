@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h1>Edit Product</h1>
+    <form method="POST" action="/products/{{product._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="imagePath">Image Path:</label>
+            <input type="text" id="imagePath" name="imagePath" class="form-control" value="{{product.imagePath}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" class="form-control" value="{{product.title}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" class="form-control" required>{{product.description}}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" class="form-control" value="{{product.price}}" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Product</button>
+        <a class="btn btn-secondary" href="/products/list">Cancel</a>
+    </form>
+</div>

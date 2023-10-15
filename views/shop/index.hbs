@@ -1,0 +1,18 @@
+<div class="row">
+    {{#each products}}
+    <div class="col-lg-3 col-sm-6">
+        <div class="single_product_item">
+            <img src="{{imagePath}}" alt="{{title}}" class="img-fluid">
+            <div class="single_product_text">
+                <h4>{{title}}</h4>
+                <p>{{description}}</p>
+                <h3>${{price}}</h3>
+                <a href="#" class="btn btn-primary add_cart">
+                    <i class="fa-solid fa-cart-plus"></i> Add to cart
+                    <i class="ti-heart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/each }}
+</div>
